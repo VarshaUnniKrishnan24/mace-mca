@@ -1,3 +1,2 @@
-import math
-r=int(input('enter radius :'))
-print("area of circle =%.2f"%(math.pi*r*r))
+s="abcdefghijk"
+print('',((len(s)/2)-1):-((len(s)/2)-1))

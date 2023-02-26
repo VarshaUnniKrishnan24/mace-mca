@@ -1,0 +1,2 @@
+a="merin"
+print(a)
