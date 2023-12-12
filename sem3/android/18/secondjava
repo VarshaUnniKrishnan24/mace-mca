@@ -1,0 +1,26 @@
+package com.example.exam;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.SharedPreferences;
+import android.media.Image;
+import android.os.Bundle;
+import android.widget.ImageView;
+
+public class SecondActivity extends AppCompatActivity {
+    ImageView i;
+    SharedPreferences sp;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_second);
+        ImageView i = findViewById(R.id.img);
+        sp = getSharedPreferences("MyPref", MODE_PRIVATE);
+        String a = sp.getString("Result", "");
+        if (a.equals("pass")) {
+            i.setImageResource(R.drawable.happy);
+        } else {
+            i.setImageResource(R.drawable.sad);
+        }
+    }
+}
